@@ -392,3 +392,14 @@ function build_url($base, $items, $s=NULL) {
 
 	return "$base?" . http_build_query($items, '', '&');
 }
+
+function host_links($host) {
+    echo '<div>';
+    echo '<h2>Links</h2>';
+    echo '<ul>';
+    printf("<li><a href=\"https://hopglass.berlin.freifunk.net/#!v:m;n:%s.olsr\">Hopglass</a></li>", $host);
+    printf("<li><a href=\"https://monitor.berlin.freifunk.net/grafana/d/KDjDQX24z/node-stats?var-node=%s\">Grafana</a></li>", $host);
+    printf("<li><a href=\"https://util.berlin.freifunk.net/knoteninfo?knoten=%s&typ=wiki\">Wiki</a></li>", $host);
+    echo '</ul>';
+    echo '</div>';
+}

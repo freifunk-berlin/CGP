@@ -16,6 +16,7 @@ html_start();
 printf("<fieldset id=\"%s\">", htmlentities($host));
 printf("<legend>%s</legend>", htmlentities($host));
 
+
 		echo <<<EOT
 <input type="checkbox" id="navicon" class="navicon" />
 <label for="navicon"></label>
@@ -27,7 +28,10 @@ if (!strlen($host) || !$plugins = collectd_plugins($host)) {
 	return false;
 }
 
+echo '<div style="float: left;">';
 plugins_list($host, $selected_plugins);
+host_links($host);
+echo '</div>';
 
 echo '<div class="graphs">';
 foreach ($selected_plugins as $selected_plugin) {
