@@ -18,7 +18,7 @@ function html_start() {
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CGP{$path}</title>
+	<title>Freifunk Berlin - CGP{$path}</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="{$html_weburl}layout/style.css" type="text/css">
 	<link rel="stylesheet" href="{$html_weburl}layout/style-b.css" type="text/css" media="(max-width: 1000px),(max-device-width: 1000px) and (orientation: portrait),(max-device-width: 767px) and (orientation: landscape)">
@@ -62,7 +62,7 @@ echo <<<EOT
 <body>
 
 <div id="header">
-  <h1><a href="{$html_weburl}">Collectd Graph Panel</a></h1>
+  <h1><a href="{$html_weburl}">Freifunk Berlin - Collectd Graph Panel</a></h1>
 </div>
 
 EOT;
@@ -156,7 +156,7 @@ function plugins_list($host, $selected_plugins = array()) {
 
 	$plugins = collectd_plugins($host);
 
-	echo '<div class="plugins">';
+	echo '<div>';
 	echo '<h2>Plugins</h2>';
 	echo '<ul>';
 
@@ -397,8 +397,8 @@ function host_links($host) {
     echo '<div>';
     echo '<h2>Links</h2>';
     echo '<ul>';
-    printf("<li><a href=\"https://hopglass.berlin.freifunk.net/#!v:m;n:%s.olsr\">Hopglass</a></li>", $host);
     printf("<li><a href=\"https://monitor.berlin.freifunk.net/grafana/d/KDjDQX24z/node-stats?var-node=%s\">Grafana</a></li>", $host);
+    printf("<li><a href=\"https://hopglass.berlin.freifunk.net/#!v:m;n:%s.olsr\">Hopglass</a></li>", $host);
     printf("<li><a href=\"https://util.berlin.freifunk.net/knoteninfo?knoten=%s&typ=wiki\">Wiki</a></li>", $host);
     echo '</ul>';
     echo '</div>';

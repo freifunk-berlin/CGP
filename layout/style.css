@@ -23,7 +23,7 @@ label[for="navicon"] {
 }
 
 #header {
-	background: #4d79b5;
+	background: #ffb400;
 	padding-left: 10px;
 	color: #fff;
 }
@@ -147,6 +147,7 @@ hr {
 }
 
 .plugins {
+    float: left;
 	margin-right: 25px;
 	width: 100px;
 }
