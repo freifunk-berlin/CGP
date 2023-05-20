@@ -28,8 +28,9 @@ if (!strlen($host) || !$plugins = collectd_plugins($host)) {
 	return false;
 }
 
-echo '<div style="float: left;">';
+echo '<div class="plugins">';
 plugins_list($host, $selected_plugins);
+echo '<hr style="border: white;" />';
 host_links($host);
 echo '</div>';
 
